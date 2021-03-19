@@ -4,11 +4,12 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
-        
         <div id="app">
             {{ message }}
+
+            <input type="text" id="binaryNumber" name="binaryNumber">
+            <button v-on:click="convertBinaryToDecimal">Convert Number</button>
         </div>
-        
         <script src="index.js"></script>
     </body>
 </html>
