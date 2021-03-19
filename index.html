@@ -5,10 +5,12 @@
     </head>
     <body>
         <div id="app">
-            {{ message }}
-
-            <input type="text" id="binaryNumber" name="binaryNumber">
+            <input type="text" id="binaryNumber" name="binaryNumber" v-model="binaryNumber">
             <button v-on:click="convertBinaryToDecimal">Convert Number</button>
+
+            {{ binaryNumber }}
+
+            {{ errorMessage }}
         </div>
         <script src="index.js"></script>
     </body>
