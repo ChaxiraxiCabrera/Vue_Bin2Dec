@@ -2,31 +2,33 @@ var app = new Vue({
     el: '#app',
     data: {
       binaryNumber: '',
+      decimalNumber: '',
       errorMessage: ''
     },
     methods: {
       convertBinaryToDecimal: function () {
         if (isValidInput(this.binaryNumber)) {
-          this.binaryNumber = this.binaryNumber.split('').reverse().join('');
+          this.decimalNumber = parseInt(this.binaryNumber, 2);
           this.errorMessage = '';
         } else {
-          this.binaryNumber = '';
-          this.errorMessage = 'You should introduce a Binary Number';
+          displayError();
         }
       }
     }
 });
 
 
-function isValidInput (input) {
+function isValidInput(input){
   const binaryRegex = /^[01]+$/;
-  if (input.length != 8) {
-    return false;
-  }
-
   if (!input.match(binaryRegex)) {
     return false;
   }
 
   return true;
+}
+
+function displayError(){
+  this.binaryNumber = '';
+  this.decimalNumber = '';
+  this.errorMessage = 'You should introduce a Binary Number';
 }

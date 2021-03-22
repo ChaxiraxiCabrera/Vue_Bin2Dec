@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://unpkg.com/a11y-css-reset/reset.css" />
         <link rel="stylesheet" href="index.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
@@ -8,7 +9,7 @@
             <input type="text" id="binaryNumber" name="binaryNumber" v-model="binaryNumber">
             <button v-on:click="convertBinaryToDecimal">Convert Number</button>
 
-            {{ binaryNumber }}
+            {{ decimalNumber }}
 
             {{ errorMessage }}
         </div>
