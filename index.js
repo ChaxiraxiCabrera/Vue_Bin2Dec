@@ -11,7 +11,9 @@ var app = new Vue({
           this.decimalNumber = parseInt(this.binaryNumber, 2);
           this.errorMessage = '';
         } else {
-          displayError();
+          this.binaryNumber = '';
+          this.decimalNumber = '';
+          this.errorMessage = 'You should introduce a Binary Number';
         }
       }
     }
@@ -25,10 +27,4 @@ function isValidInput(input){
   }
 
   return true;
-}
-
-function displayError(){
-  this.binaryNumber = '';
-  this.decimalNumber = '';
-  this.errorMessage = 'You should introduce a Binary Number';
 }
